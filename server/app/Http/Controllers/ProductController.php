@@ -4,92 +4,147 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-use App\product;
+use App\Product;
 
 class ProductController extends Controller
 {
-    public function add(Request $request)
+    
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
     {
-        $validator=Validator::make($request->all(),[
-            'name'=>'required',
-            'category'=>'required',
-            'producer'=>'required',
-            'desc'=>'required',
-            'image'=>'required'| 'image',
-            'price'=>'required'
-        ]);
-        if($validator->fails())
-        {
-            return response()->json(['error'=>$validator->errors()->all()], 409);
-        }
-        $p = new product();
-        $p->name=$request->name;
-        $p->category=$request->category;
-        $p->producer=$request->producer;
-        $p->desc=$request->desc;
-        $p->price=$request->price;
-        $p->save();
-
-        $url="http/localhost:8000/storage/";
-        $file=$request->file('image');
-        $extension=$file->getClientOriginalExtension();
-        $path=$request->file('image')->storeAs('proimages/', $p->id.'.'.$extension);
-        $p->image=$path;
-        $p->imgpath=$url.$path;
-        $p->save();
+        return ProductResource::collection(Product::all());
     }
 
-
-    public function update(Request $request)
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
     {
-        $validator=Validator::make($request->all(),[
-            'name'=>'required',
-            'category'=>'required',
-            'producer'=>'required',
-            'desc'=>'required',
-            'id'=>'required',
-            'price'=>'required'
-        ]);
-        if($validator->fails())
-        {
-            return response()->json(['error'=>$validator->errors()->all()], 409);
-        }
-        $p = product::find($request->id);
-        $p->name=$request->name;
-        $p->category=$request->category;
-        $p->producer=$request->producer;
-        $p->desc=$request->desc;
-        $p->price=$request->price;
-        $p->save();
-        return response()->json(['message'=>" Product Successfully Updated"]);
-
-       
+        //
     }
 
-    public function delete(Request $request)
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
     {
-        $validator=Validator::make($request->all(),[
-            'id'=>'required',
+        $validator = Validator::make(
+            $request->all(),
+            [
+                'name' =>  'required' , 
+                'description' => 'required|string|max:100', 
+                'price' => 'required',
+                'category_id' => 'required'  ,
+                'image' =>'  '
+
+            ]
+        );
+        if ($validator->fails()) 
+            return response()->json($validator->errors());
+
+
+         
+            
+
+        $p = Product::create([
+                'name' =>   $request->name, 
+                'description' => $request->description, 
+                'price' =>  $request->price,                
+                'category_id' =>  $request->category_id, 
+                'image' =>  $request->image, 
+                 
+           
         ]);
-        if($validator->fails())
-        {
-            return response()->json(['error'=>$validator->errors()->all()], 409);
-        }
-        $p = product::find($request->id) -> delete();
-        return response()->json(['message'=>" Product Successfully Deleted"]);
+        return response()->json(["Uspesno ste dodali proizvod",$p]);
     }
 
-    public function show(Request $request)
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Product  $product
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
     {
-        session(['keys'=>$request->keys]);
-        $products= product:: where (function ($q){
-            $q-> where('products.id','LIKE','%'.session('keys').'%')
-            -> orwhere ('products.name','LIKE','%'.session('keys').'%')
-            -> orwhere ('products.price','LIKE','%'.session('keys').'%')
-            -> orwhere ('products.category','LIKE','%'.session('keys').'%')
-            -> orwhere ('products.producer','LIKE','%'.session('keys').'%');
-        })->select('priducts.*')->get();
-        return response()->json(['products'=>$products]);
+        return new ProductResource(Product::find($id));
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Models\Product  $product
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Product $product)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Product  $product
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        $validator = Validator::make(
+            $request->all(),
+            [
+                'name' =>  'required' , 
+                'description' => 'required|string|max:250', 
+                'price' => 'required',
+                'category_id' => 'required'  ,
+                'image' =>'  '
+
+            ]
+        );
+        if ($validator->fails()) 
+            return response()->json($validator->errors());
+
+
+        $l=Product::find($id);
+        if($l){
+            $l->name = $request->name;
+            $l->description = $request->description;
+            $l->price = $request->price;
+            $l->category_id  = $request->category_id;
+            $l->image = $request->image; 
+            $l->save();
+            return response()->json(['Uspesno ste izmenili proizvod!', new ProductResource($l)]);
+        }else{
+            return response()->json('Trazeni proizvod ne postoji u bazi!');
+        }
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\Product  $product
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        $p = Product::find($id);
+        if($p){ 
+            $p->delete();
+            return response()->json("Uspesno ste izbrisali proizvod!" );
+        } else {
+
+            return response()->json([
+                'message' => 'Trazeni proizvod ne postoji u bazi!',
+            ], 400);
+        }
     }
 
 }

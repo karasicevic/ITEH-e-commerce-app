@@ -240,22 +240,21 @@ iframe {
 
 /* Dodajte boje za kategorije */
 .category1 {
-  background-color: #ffc107;
+  background-color: #993d7c;
 }
 
 .category2 {
-  background-color: #28a745;
+  background-color: #115a51;
 }
 .category3 {
-  background-color: #2e68c0;
+  background-color: #96accd;
 }.category4 {
-  background-color: #3ca765;
+  background-color: #b2e467;
 }.category5 {
-  background-color: #c26089;
+  background-color: #d78913;
+}.category6 {
+  background-color: #f9410f;
 }
-/* Dodajte više kategorija ako je potrebno */
-
-/* Default boja */
 .default {
   background-color: #f8f9fa;
 }

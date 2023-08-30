@@ -7,11 +7,12 @@ function Navbar({token,addToken}) {
      
     var config = {
       method: 'post',
-      url: '/api/logout',
+      url: 'http://localhost:8000/api/logout',
       headers: { 
         'Authorization': 'Bearer '+window.sessionStorage.getItem("auth_token")
         
       },
+
     };
     console.log(window.sessionStorage.getItem("auth_token"))
     

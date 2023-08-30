@@ -16,6 +16,8 @@ const ProductCard = ({ product , addToCart, removeFromCart, inCart,selectedCurre
             return 'category4';
         case 5:
             return 'category5';
+        case 6:
+            return 'category6';
    
       default:
         return 'default';

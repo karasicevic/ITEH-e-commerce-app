@@ -16,7 +16,7 @@ const Login = ({addToken,addRole}) => {
     .then((res)=>{ //ako se uspesno izvrsi logovanje uci ce u funkciju (zbog ovog then)
         console.log(res.data[0]);
         if(res.data.success===true){
-            alert("USPESNO");  
+            alert("Uspešno ste se prijavili!");  
            
           
             //token koji smo dobili od korisnika treba da sacuvamo u storag-u da bismo znali cemu taj korisnik ima pristup
@@ -41,7 +41,7 @@ const Login = ({addToken,addRole}) => {
 
 
         }else{
-            alert("NEUSPESNO");
+            alert("Neuspešno prijavljivanje!");
         }
     });
   };

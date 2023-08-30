@@ -57,11 +57,12 @@ const EditProductModal = ({ show, handleClose, product, handleUpdate }) => {
               required
             >
                 <option value={1}>Izaberi kategoriju</option>
-                <option value={1}>Desktop računari</option>
-                <option value={2}>Laptop računari</option>
-                <option value={3}>Monitori</option>
-                <option value={4}>Periferija</option>
-                <option value={5}>Mrežna oprema</option>
+                <option value={1}>Raćunari i oprema</option>
+                <option value={2}>Gejming oprema</option>
+                <option value={3}>Multimedija</option>
+                <option value={4}>Telefoni</option>
+                <option value={5}>Električni trotineti</option>
+                <option value={6}>Mrežna oprema</option>
             </Form.Control>
           </Form.Group>
           <Button variant="primary" type="submit">

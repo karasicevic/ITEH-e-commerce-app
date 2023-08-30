@@ -51,7 +51,7 @@ const Register = () => {
   return (
     <div className="registration-form-container">
       <form onSubmit={handleSubmit} className="registration-form">
-        <h2>Registracija</h2>
+        <h2 className="compText">//Registruj se</h2>
 
         <label htmlFor="name">Ime:</label>
         <input type="text" id="name" name="name" required onInput={handleInput} />

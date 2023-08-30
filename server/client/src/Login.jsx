@@ -56,7 +56,7 @@ const Login = ({addToken,addRole}) => {
   return (
     <div className="login-form-container">
       <form onSubmit={handleSubmit} className="login-form">
-        <h2>Prijava</h2>
+        <h2 className="compText left-align">//Prijavi se</h2>
 
         <label htmlFor="email">E-mail:</label>
         <input type="email" id="email" name="email" required  onInput={handleInput}/>

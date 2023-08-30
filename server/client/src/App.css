@@ -63,8 +63,8 @@
 
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 200px;
+  margin:10px;
 }
 
 .jumbotron {
@@ -82,18 +82,36 @@
 }
 
 .overlay-text {
+  font-family: 'Lucida Console';
   position: absolute;
   top: 20%;
-  left: 50%;
+  right: 30%;
   transform: translate(-50%, -50%);
-  color: #061E43;
-  text-align: center;
-  background-color: rgba(211, 211, 211, 0.8); /* lightgray sa 80% providnosti */
+  color: #010305;
+  text-align: left;
+  text-shadow: 10px 4px 2px rgb(206, 203, 203);
+  /*background-color: rgba(154, 177, 226, 0.35); /* lightgray sa 80% providnosti */
 }
 .content {
   display: flex;
-  flex-wrap: wrap;
+  /*flex-wrap: wrap;*/
   gap: 5rem;
+  max-width: 100%;
+  height: auto;
+  /*display: block;*/
+  margin-left:0px;
+  margin-right:0px;
+  position: static;
+  
+}
+
+.compText{
+  font-family: 'Consolas';
+  color: #918e8e;
+}
+
+.justifyText{
+  text-Align: 'justify';
 }
 
 section {
@@ -109,16 +127,17 @@ section {
 
 
 .login-form-container {
+ 
   max-width: 600px;
   height: 390px;
   margin: 2rem auto;
   padding: 1rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(201, 199, 199, 0.1);
   border-radius: 0.5rem;
   margin-bottom: 5%;
   margin-top: 5%;
-
-  background-color: #fdca58;
+  color: #a3a2a2;
+  background-color: #583239;
 }
 
 .login-form {
@@ -140,8 +159,8 @@ section {
 .login-form button {
   margin-top: 3rem;
   padding: 0.5rem;
-  background-color: #2E4477;
-  color: #fff;
+  background-color: #e9ebee;
+  color:#583239;
   border: none;
   border-radius: 0.25rem;
   cursor: pointer;
@@ -153,13 +172,15 @@ section {
 
 
 .registration-form-container {
+  color: #a3a2a2;
+  background-color: #583239;
   max-width: 600px;
   height: 460px;
   margin: 2rem auto;
   padding: 1rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 0.5rem;
-  background-color: #fdca58;
+  
 }
 
 .registration-form {
@@ -181,8 +202,8 @@ section {
 .registration-form button {
   margin-top: 3rem;
   padding: 0.5rem;
-  background-color: #2E4477;
-  color: #fff;
+  background-color: #e9ebee;
+  color: #583239;
   border: none;
   border-radius: 0.25rem;
   cursor: pointer;
@@ -193,26 +214,32 @@ section {
 }
 
 .contact-page-container {
-  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  background-color: #ffffff;
   max-width: 100%;
   margin: 2rem auto;
   padding: 1rem;
   text-align: center;
-  display: flex;
-  justify-content: space-between; 
-  align-items: flex-start; 
+  /*justify-content: space-between; 
+  align-items: flex-start; */
 }
 
 
 .contact-info {
+  margin-bottom: 50px;
+  margin-top: 50px;
+  font-size: 24px;
   flex: 1; /* Da se prilagodi raspoloživom prostoru */
-  margin-right: 20px; /* Da ostavi razmak između elemenata */
+  /*margin-right: 100px;  Da ostavi razmak između elemenata */
 }
 
 .map-container {
   margin-top: 2rem;
   height: 400px; 
-  width: 100%; 
+  width: 1000px; 
   margin-left: 1rem;
   flex:1;
 }
@@ -298,19 +325,25 @@ iframe {
 }
 
 .content{
-  margin-top: 200px;
+  margin-top: 250px;
 }
 .content-bootom{
-  margin-top: 50px;
-  margin-bottom: 200px;
+  margin-top: 100px;
+  margin-bottom: 500px;
 }
 
 .content-bottom {
   display: flex;
   flex-wrap: wrap;
   gap: 5rem;
+  margin-bottom: -10px;
+  margin-top: -39px;
 }
 
+.reg{
+  margin-top: 25px;
+  
+}
 .h1{
   color: #583239;
 }
@@ -320,3 +353,45 @@ iframe {
 .h3{
   color: #061e43;
 }
+
+/* Center-align the text */
+.center-align {
+  text-align: center;
+}
+
+/* Left-align the text */
+.left-align {
+  text-align: left;
+}
+
+/* Right-align the text */
+.right-align {
+  text-align: right;
+}
+
+/* Justify the text */
+.justify-align {
+  text-align: justify;
+}
+
+.aboutUs {
+  padding: 20px;
+  margin-top: 8px;
+  background-color: #583239;
+  color: #c2b1b1;
+  font-size: 18px;
+
+}
+
+.smallCom {
+  background-color: #583239;
+  color: #c2b1b1;
+  padding: 20px;
+  
+   
+}
+
+.margin-left{
+  margin-left:20px;
+}
+

@@ -6,7 +6,7 @@ const Ponuda = ({products}) => {
 
   return (
     <div>
-      <h1>Ponuda</h1>
+      <h1 className="compText margin-left"> //Ponuda</h1>
       <ProductGrid products={products} />
     </div>
   );

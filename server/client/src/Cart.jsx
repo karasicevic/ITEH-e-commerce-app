@@ -3,7 +3,7 @@ import './Cart.css';
 import { Modal } from 'react-bootstrap';
 import CartItem from './CardItem';
 
-const Cart = ({ cartItems, removeItem,show,setShow }) => {
+const Cart = ({ cartItems, removeItem,removeAllItems, show,setShow }) => {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
@@ -28,7 +28,7 @@ const Cart = ({ cartItems, removeItem,show,setShow }) => {
 
           };
     
-          const response = await fetch('/api/orders', {
+          const response = await fetch('http://localhost:8000/api/orders', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -37,9 +37,11 @@ const Cart = ({ cartItems, removeItem,show,setShow }) => {
           });
     
           const data = await response.json();
+
           if (response.ok) {
             setSuccess('Uspešno ste kreirali porudžbinu.');
-            removeItem(cartItems); // brisanje stavki iz korpe nakon kreiranja porudžbine
+            removeAllItems(cartItems);
+           // brisanje stavki iz korpe nakon kreiranja porudžbine
           } else {
             setError(data.message || 'Došlo je do greške prilikom kreiranja porudžbine.');
           }

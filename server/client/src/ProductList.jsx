@@ -19,7 +19,7 @@ const ProductList = ({products,setProducts}) => {
   
     const handleDelete = async (productId) => {
       try {
-        const response = await axios.delete(`/api/products/${productId}`);
+        const response = await axios.delete(`http://localhost:8000/api/products/${productId}`);
         console.log(response.data);
         setProducts(products.filter(product => product.id !== productId));
       } catch (error) {
@@ -29,7 +29,7 @@ const ProductList = ({products,setProducts}) => {
  
     const handleUpdate = async (productId, updatedData) => {
         try {
-          const response = await axios.put(`/api/products/${productId}`, updatedData);
+          const response = await axios.put(`http://localhost:8000/api/products/${productId}`, updatedData);
           console.log(response.data);
           setProducts(
             products.map((product) => (product.id === productId ? { ...product, ...updatedData } : product))

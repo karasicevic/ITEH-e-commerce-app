@@ -69,6 +69,13 @@ const ProductGrid = ({ products }) => {
     const newCart = cart.filter((item) => item.id !== product.id);
     setCart(newCart);
   };
+
+  const removeAllFromCart = (products) => {
+    products.forEach(product => {
+    const newCart = cart.filter((item) => item.id === product.id);
+    setCart(newCart);
+    });
+  };
   const filteredProducts = products.filter(product => {
     // Filtriranje na osnovu kategorije proizvoda
     if (filter !== '' && product.category.id !== parseInt(filter)) {
@@ -115,11 +122,12 @@ const ProductGrid = ({ products }) => {
         </select>
         <select value={filter} onChange={handleFilterChange}>
           <option value="">Sve kategorije</option>
-          <option value="1">Desktop računari</option>
-          <option value="2">Laptop računari</option>
-          <option value="3">Monitori</option>
-          <option value="4">Periferija</option>
-          <option value="5">Mrežna oprema</option>
+          <option value="1">Računari i oprema</option>
+          <option value="2">Gejming oprema</option>
+          <option value="3">Multimedija</option>
+          <option value="4">Telefoni</option>
+          <option value="5">Električni trotineti</option>
+          <option value="6">Mrežna oprema</option>
         </select>
         <input type="text" value={search} onChange={handleSearchChange} placeholder="Pretraga proizvoda" />
       </div>
@@ -143,7 +151,7 @@ const ProductGrid = ({ products }) => {
       </div>
       {
             cartOpen?
-            <> <Cart cartItems={cart} removeItem={removeFromCart} show={true} setShow={handleCartClose}></Cart></>
+            <> <Cart cartItems={cart} removeItem={removeFromCart} removeAllItems={removeAllFromCart} show={true} setShow={handleCartClose}></Cart></>
             :
             <></>
 

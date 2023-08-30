@@ -17,7 +17,7 @@ const Register = () => {
         .then((res)=>{  
             console.log(res.data);
             //nakonn sto se registruje da ga posaljemo na stranicu za login
-            alert("USPEH!");
+            alert("Uspesno ste se registrovali za korišćenje web prodavnice!");
             navigate("/login");
         })
         .catch(function (error) {

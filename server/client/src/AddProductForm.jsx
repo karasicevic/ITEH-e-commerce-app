@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import './AddProductForm.css';
+import ProductList from './ProductList';
 const AddProductForm = () => {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
@@ -19,10 +20,10 @@ const AddProductForm = () => {
     formData.append('image', image);
 
     try {
-      const response = await axios.post('/api/products', formData);
+      const response = await axios.post('http://localhost:8000/api/products', formData);
       console.log(response.data);
       alert("USPESNO DODATO")
-      //TODO DOPUNI NIZ SA SETPRODUCTS
+    //TODO
       
     } catch (error) {
       console.error(error);
@@ -50,11 +51,12 @@ const AddProductForm = () => {
       <label htmlFor="category_id">Kategorija proizvoda:</label>
       <select id="category_id"  onInput={(event) => handleInput(event)}>
         <option value={1}>Izaberi kategoriju</option>
-        <option value={1}>Desktop računari</option>
-        <option value={2}>Laptop računari</option>
-        <option value={3}>Monitori</option>
-        <option value={4}>Periferija</option>
-        <option value={5}>Mrežna oprema</option>
+        <option value={1}>Računari i oprema</option>
+        <option value={2}>Gejming oprema</option>
+        <option value={3}>Multimedija</option>
+        <option value={4}>Telefoni</option>
+        <option value={5}>Električni trotineti</option>
+        <option value={6}>Mrežna oprema</option>
       </select>
 
       <label htmlFor="image">Slika proizvoda:</label>

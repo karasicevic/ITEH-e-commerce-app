@@ -50,12 +50,13 @@ import React, { useEffect, useState } from 'react';
 
     return (
       <div className="contact-page-container">
+       <div className="contact-info">
         <h2>Kontakt informacije</h2>
         <p>Adresa: Tosin Bunar 147, Novi Beograd, Srbija</p>
         <p>Telefon: +381 12 345 6789</p>
         <p>Email: info@ecommerce.com</p>
-
-        <div id="map" className="map-container"></div>
+       </div>
+       < div className="map-container" id="map"></div>
       </div>
     );
   };

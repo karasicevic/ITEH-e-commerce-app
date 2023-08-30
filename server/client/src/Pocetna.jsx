@@ -3,31 +3,38 @@ import React from 'react';
 const Pocetna = () => {
   return (
     <div className="container">
-         <header className="jumbotron">
-
-        <img src="https://wallpaperaccess.com/full/5332808.jpg" alt="Naslovna slika prodavnice" className="banner-image" />
-        <div className="overlay-text">
-          <h1>Dobrodošli u našu prodavnicu kompjuterske opreme!</h1>
-          <p>
-            Najbolji izbor kompjuterske opreme na jednom mestu. Brza isporuka, širok asortiman, povoljne cene.
-          </p>
-        </div>
-      </header>
-
-      <div className="content">
+       <div className="content">
         <section>
           <h2>O nama</h2>
           <p>
-            Naša prodavnica je osnovana 2023. godine s ciljem da ponudi najbolje kompjuterske proizvode po konkuretnim cenama. Naš asortiman uključuje najnovije modele računara, laptopova, komponenti, periferija i mnogo toga. Brzo šaljemo i pouzdano podržavamo sve naše proizvode.
-          </p>
+          Dobrodošli u našu prodavnicu tehnike, gde se svet tehnologije stapa sa vašim potrebama. Mi smo vaša destinacija za najnovije uređaje, inovativne gadgete i visokokvalitetnu elektroniku. Naš cilj je da vam omogućimo pristup tehnološkim rešenjima koja će vas inspirisati i unaprediti vaš svakodnevni život. Bez obzira da li tražite najnovije pametne telefone, moderna računarska rešenja ili savremenu kućnu zabavu, naša prodavnica nudi širok asortiman proizvoda renomiranih brendova. Svojom stručnošću i posvećenošću, želimo da vam omogućimo da iskusite budućnost tehnologije već danas. Dobrodošli u svet mogućnosti.
+           </p>
         </section>
 
         <section>
-          <h2>Zašto odabrati nas?</h2>
-          <p>
-            Naš tim stručnjaka za kompjutersku opremu je uvek tu da vam pomogne u izboru proizvoda koji najbolje odgovaraju vašim potrebama. Posvećeni smo pružanju izvanredne korisničke podrške i brze isporuke, kako biste uživali u svojim novim proizvodima što je pre moguće.
-          </p>
+          <h2>Pomoću nas do željenih uređaja!</h2>
+          <h1>Zaplovi u svet tehnike!</h1>
+          <h2>Visok kvalitet - pristupačna cena!</h2>   
         </section>
+      </div>
+         <header className="jumbotron">
+
+        <img src="https://wallpapers.com/images/hd/holographic-mobile-device-technology-0tu8y8misgam4ydb.jpg" alt="Naslovna" className="banner-image" />
+        <div className="overlay-text">
+          <h1>STUDENJAK - online prodavnica tehničke opreme!</h1>
+        </div>
+      </header>
+
+      <div className="content-bottom">
+        <section>
+          <h2>Od nas za Vas</h2>
+          <p>
+          Nudimo vam širok spektar proizvoda iz različitih tehnoloških kategorija kako bismo zadovoljili vaše potrebe i strasti. Naša prodavnica je dom raznovrsnosti, gde možete pronaći rešenja za sve svoje tehničke želje. </p>
+        </section>
+        
+        <section>
+          <h1>Registruj se i pronađi baš ono što ti je potrebno!</h1>
+           </section>
       </div>
     </div>
   );

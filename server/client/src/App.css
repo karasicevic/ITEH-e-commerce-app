@@ -1,5 +1,5 @@
 .topnav {
-  background-color: #333;
+  background-color: #061E43;
   overflow: hidden;
 }
 
@@ -12,12 +12,12 @@
 }
 
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: #fdca58;
+  color: #061E43;
 }
 
 .topnav a.active {
-  background-color: #4CAF50;
+  background-color: #2E4477;
   color: white;
 }
 .topnav .nav-item {
@@ -26,14 +26,16 @@
   color: #333;
   padding: 8px 16px;
   display: inline-block;
+  text-align: center;
   /* ... */
 }
 
 .site-footer {
-  background-color: #333;
+  background-color: #2E4477;
   color: #fff;
   padding: 30px 0;
   font-size: 14px;
+  text-align: center;
 }
 
 .site-footer p {
@@ -66,7 +68,7 @@
 }
 
 .jumbotron {
-  background-color: #f8f9fa;
+  background-color: #59659C;
   padding: 2rem 1rem;
   margin-bottom: 2rem;
   border-radius: 0.3rem;
@@ -81,17 +83,17 @@
 
 .overlay-text {
   position: absolute;
-  top: 50%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: black;
+  color: #061E43;
   text-align: center;
   background-color: rgba(211, 211, 211, 0.8); /* lightgray sa 80% providnosti */
 }
 .content {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 5rem;
 }
 
 section {
@@ -107,7 +109,8 @@ section {
 
 
 .login-form-container {
-  max-width: 400px;
+  max-width: 600px;
+  height: 390px;
   margin: 2rem auto;
   padding: 1rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -115,6 +118,7 @@ section {
   margin-bottom: 5%;
   margin-top: 5%;
 
+  background-color: #fdca58;
 }
 
 .login-form {
@@ -129,14 +133,14 @@ section {
 
 .login-form input {
   padding: 0.5rem;
-  border: 1px solid #ccc;
+  border: 1px solid #59659C;
   border-radius: 0.25rem;
 }
 
 .login-form button {
-  margin-top: 1rem;
+  margin-top: 3rem;
   padding: 0.5rem;
-  background-color: #007bff;
+  background-color: #2E4477;
   color: #fff;
   border: none;
   border-radius: 0.25rem;
@@ -144,16 +148,18 @@ section {
 }
 
 .login-form button:hover {
-  background-color: #0056b3;
+  background-color: #59659C;
 }
 
 
 .registration-form-container {
-  max-width: 400px;
+  max-width: 600px;
+  height: 460px;
   margin: 2rem auto;
   padding: 1rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 0.5rem;
+  background-color: #fdca58;
 }
 
 .registration-form {
@@ -168,14 +174,14 @@ section {
 
 .registration-form input {
   padding: 0.5rem;
-  border: 1px solid #ccc;
+  border: 1px solid #59659C;
   border-radius: 0.25rem;
 }
 
 .registration-form button {
-  margin-top: 1rem;
+  margin-top: 3rem;
   padding: 0.5rem;
-  background-color: #007bff;
+  background-color: #2E4477;
   color: #fff;
   border: none;
   border-radius: 0.25rem;
@@ -183,20 +189,32 @@ section {
 }
 
 .registration-form button:hover {
-  background-color: #0056b3;
+  background-color: #59659c;
 }
 
 .contact-page-container {
-  max-width: 800px;
+  background-color: #fff;
+  max-width: 100%;
   margin: 2rem auto;
   padding: 1rem;
   text-align: center;
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-start; 
+}
+
+
+.contact-info {
+  flex: 1; /* Da se prilagodi raspoloživom prostoru */
+  margin-right: 20px; /* Da ostavi razmak između elemenata */
 }
 
 .map-container {
   margin-top: 2rem;
-  height: 400px; /* Dodajte visinu mape */
-  width: 100%; /* Dodajte širinu mape */
+  height: 400px; 
+  width: 100%; 
+  margin-left: 1rem;
+  flex:1;
 }
 
 iframe {
@@ -205,12 +223,12 @@ iframe {
 
 
 .product-card {
-  background-color: white;
+  background-color: #9ba4cb;
   border: 1px solid #ccc;
-  border-radius: 4px;
-  width: 250px;
-  height: 400px;
-  padding: 1rem;
+  border-radius: 15px;
+  width: 230px;
+  height: 500px;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -222,15 +240,15 @@ iframe {
   padding: 0.25rem;
   border-radius: 4px;
   width: fit-content;
+  margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
 .product-card img {
-  width: 100px;
-  height: 100px;
+  width: 170px;
+  height: 170px;
   object-fit: cover;
   border-radius: 0.5rem;
-  margin-right: 1rem;
 }
 
 .product-card .product-info {
@@ -240,27 +258,27 @@ iframe {
 
 /* Dodajte boje za kategorije */
 .category1 {
-  background-color: #993d7c;
+  background-color: #ef99d4;
 }
 
 .category2 {
   background-color: #115a51;
 }
 .category3 {
-  background-color: #96accd;
+  background-color: #8d0c79;
 }.category4 {
   background-color: #b2e467;
 }.category5 {
-  background-color: #d78913;
+  background-color: #e9b86e;
 }.category6 {
-  background-color: #f9410f;
+  background-color: #f27654;
 }
 .default {
   background-color: #f8f9fa;
 }
 
 .button-product {
-  background-color: #f2f2f2;
+  background-color: #fdca58;
   border: 1px solid #ccc;
   color: #333;
   padding: 0.5rem;
@@ -277,4 +295,28 @@ iframe {
 
 .tabelaProducts{
   margin: 10%;
+}
+
+.content{
+  margin-top: 200px;
+}
+.content-bootom{
+  margin-top: 50px;
+  margin-bottom: 200px;
+}
+
+.content-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+
+.h1{
+  color: #583239;
+}
+.h2{
+  color: #fb8842;
+}
+.h3{
+  color: #061e43;
 }

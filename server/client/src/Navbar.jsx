@@ -1,4 +1,4 @@
- 
+import axios from 'axios'
 import { Link } from 'react-router-dom'
 
 function Navbar({token,addToken}) {
@@ -47,7 +47,7 @@ function Navbar({token,addToken}) {
 
       :
       <>
-        {window.sessionStorage.getItem("auth_name")=='Admin'  ? 
+        {window.sessionStorage.getItem("auth_name")==='Admin'  ? 
             <>
             <Link to="/admin">Admin</Link>
             <Link to="/admin/dodaj">Dodaj proizvod</Link>

@@ -2,8 +2,14 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #8b9fad;
+    padding:1rem;
+  
   }
   
+  body {
+    background-color: #9da5aa;
+  }
   label {
     font-weight: bold;
     margin-top: 1rem;
@@ -12,8 +18,8 @@ form {
   input,
   textarea,
   select {
-    width: 100%;
-    padding: 0.5rem;
+    width: 80%;
+    padding: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-top: 0.5rem;
@@ -28,17 +34,18 @@ form {
   }
   
   button {
-    background-color: #0077cc;
-    color: #fff;
+    background-color: #0f2c58;
+    color: #d3cece;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     border: none;
     margin-top: 1rem;
+    margin-bottom: 1rem;
     cursor: pointer;
   }
   
   button:hover {
-    background-color: #005fa3;
+    background-color: #0f2c58;
   }
   
   input:focus,
@@ -50,4 +57,10 @@ form {
   
 .addProduct{
     margin: 10%;
+}
+
+.headline_text{
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  margin-top:1%;
 }

@@ -15,7 +15,7 @@ function Navbar({token,addToken}) {
 
     };
     console.log(window.sessionStorage.getItem("auth_token"))
-    
+    addToken(null)
     axios(config)
     .then(function (response) {
      
@@ -24,7 +24,7 @@ function Navbar({token,addToken}) {
       window.sessionStorage.setItem('auth_token',null); 
       window.sessionStorage.setItem('auth_name',null); 
       window.sessionStorage.setItem('auth_id',null); 
-      addToken(null)
+      
 
     })
     .catch(function (error) {

@@ -38,6 +38,7 @@ const AddProductForm = () => {
 }
   return (
     <div className="addProduct">
+      <h1 className="headline_text">Dodaj Novi Proizvod</h1>
     <form onSubmit={handleSubmit}>
       <label htmlFor="name">Naziv proizvoda:</label>
       <input type="text" id="name" value={name} onChange={(event) => setName(event.target.value)} />

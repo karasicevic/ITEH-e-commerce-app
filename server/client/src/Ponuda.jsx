@@ -5,8 +5,8 @@ const Ponuda = ({products}) => {
  
 
   return (
-    <div>
-      <h1 className="compText margin-left"> //Ponuda</h1>
+    <div className='back'>
+      <h1 className="compText center-align "> Proizvodi </h1>
       <ProductGrid products={products} />
     </div>
   );

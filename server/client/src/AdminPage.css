@@ -5,14 +5,31 @@ table {
   }
   
   td, th {
-    border: 1px solid #dddddd;
+    border: 1px solid #868484;
     text-align: left;
     padding: 8px;
   }
   
   th {
-    background-color: #dddddd;
+    background-color: #583239;
+    color: #c4c2c2;
   }
   .admin{
-    margin: 5%;
+    margin: 2%;
+  }
+  .smallTable {
+    background-color: #af858c;
+    color: #080404;
+  }
+
+  .row_Table {
+    background-color: #af858c ;
+    color: #080404;
+    text-align: center;
+  }
+
+  .admin_text{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin-top:2%;
   }

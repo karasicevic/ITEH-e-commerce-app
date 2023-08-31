@@ -4,7 +4,7 @@ const AdminPage = ({porudzbine}) => {
     console.log(porudzbine)
   return (
     <div>
-      <h1>Admin panel</h1>
+      <h1 className="admin_text">Admin panel</h1>
       <div className="admin">
       <table>
             <thead>
@@ -19,7 +19,7 @@ const AdminPage = ({porudzbine}) => {
             <tbody>
                 {porudzbine.map((order) => (
                     <tr key={order.id}>
-                    <td>{order.id}</td>
+                    <td className='row_Table' >{order.id}</td>
                     <td>{order.user_id}</td>
                     <td>{order.total_price}</td>
                     <td>{order.order_date}</td>
@@ -35,7 +35,7 @@ const AdminPage = ({porudzbine}) => {
                         </thead>
                         <tbody>
                             {order.order_items.map((item) => (
-                            <tr key={item.id}>
+                            <tr key={item.id} className="smallTable">
                                 <td>{item.id}</td>
                                 <td>{item.product_name}</td>
                                 <td>{item.quantity}</td>

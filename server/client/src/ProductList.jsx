@@ -88,6 +88,7 @@ const ProductList = ({products,setProducts}) => {
     }))
   };
   return <div className='tabelaProducts'>
+    <h1 className="headline_text">Tvoji Proizvodi</h1>
     <MDBDataTableV5 hover entriesOptions={[5, 20, 25]} entries={10} pagesAmount={4} data={datatable} />
         {editedProduct && (
         <EditProductModal

@@ -20,5 +20,7 @@
   
   .cart-item-details button {
     margin-left: auto;
+    text-align: center;
+    justify-content: center;
   }
   

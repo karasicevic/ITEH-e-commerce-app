@@ -4,6 +4,7 @@
 }
 
 .topnav a {
+  font-family: 'Courier New', Courier, monospace;
   float: left;
   color: #f2f2f2;
   text-align: center;
@@ -85,7 +86,7 @@
   font-family: 'Lucida Console';
   position: absolute;
   top: 20%;
-  right: 30%;
+  right: 0;
   transform: translate(-50%, -50%);
   color: #010305;
   text-align: left;
@@ -106,8 +107,8 @@
 }
 
 .compText{
-  font-family: 'Consolas';
-  color: #918e8e;
+  font-family: 'Courier New', Courier, monospace;
+  color: #888787;
 }
 
 .justifyText{
@@ -143,6 +144,10 @@ section {
 .login-form {
   display: flex;
   flex-direction: column;
+  background-color: #583239;
+}
+.back{
+  background-color: #e6e7f0;
 }
 
 .login-form label {
@@ -152,7 +157,7 @@ section {
 
 .login-form input {
   padding: 0.5rem;
-  border: 1px solid #59659C;
+  border: 1px solid #583239;
   border-radius: 0.25rem;
 }
 
@@ -167,7 +172,7 @@ section {
 }
 
 .login-form button:hover {
-  background-color: #59659C;
+  background-color: #583239;
 }
 
 
@@ -186,6 +191,7 @@ section {
 .registration-form {
   display: flex;
   flex-direction: column;
+  background-color: #583239;
 }
 
 .registration-form label {
@@ -195,7 +201,7 @@ section {
 
 .registration-form input {
   padding: 0.5rem;
-  border: 1px solid #59659C;
+  border: 1px solid #583239;
   border-radius: 0.25rem;
 }
 
@@ -210,7 +216,7 @@ section {
 }
 
 .registration-form button:hover {
-  background-color: #59659c;
+  background-color: #583239;
 }
 
 .contact-page-container {
@@ -250,9 +256,9 @@ iframe {
 
 
 .product-card {
-  background-color: #9ba4cb;
-  border: 1px solid #ccc;
-  border-radius: 15px;
+  background-color: #cccbcb;
+  border: 0px solid #ccc;
+  border-radius: 70px;
   width: 230px;
   height: 500px;
   padding: 2rem;
@@ -273,41 +279,50 @@ iframe {
 
 .product-card img {
   width: 170px;
-  height: 170px;
+  height: 177px;
   object-fit: cover;
-  border-radius: 0.5rem;
+  border-radius: 50rem;
 }
 
 .product-card .product-info {
   display: flex;
+  /*text-align: center;*/
   flex-direction: column;
 }
 
 /* Dodajte boje za kategorije */
 .category1 {
-  background-color: #ef99d4;
+  background-color: #583239;
+  color:#ccc9c9
 }
 
 .category2 {
-  background-color: #115a51;
+  background-color: #583239;
+  color:#ccc9c9
 }
+
 .category3 {
-  background-color: #8d0c79;
+  background-color: #583239;
+  color:#ccc9c9
 }.category4 {
-  background-color: #b2e467;
+  background-color: #583239;
+  color:#ccc9c9
 }.category5 {
-  background-color: #e9b86e;
+  background-color: #583239;
+  color:#ccc9c9
 }.category6 {
-  background-color: #f27654;
+  background-color: #583239;
+  color:#ccc9c9
 }
 .default {
-  background-color: #f8f9fa;
+  background-color: #583239;
+  color:#ccc9c9
 }
 
 .button-product {
-  background-color: #fdca58;
+  background-color: #f18585;
   border: 1px solid #ccc;
-  color: #333;
+  color: #1a0a0a;
   padding: 0.5rem;
   font-size: 1rem;
   border-radius: 4px;
@@ -322,6 +337,7 @@ iframe {
 
 .tabelaProducts{
   margin: 10%;
+  background-color: #8b9fad;
 }
 
 .content{
@@ -348,7 +364,7 @@ iframe {
   color: #583239;
 }
 .h2{
-  color: #fb8842;
+  color: #835539;
 }
 .h3{
   color: #061e43;
@@ -392,6 +408,12 @@ iframe {
 }
 
 .margin-left{
-  margin-left:20px;
+  margin-left:2%;
 }
 
+
+.headline_text{
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  margin-top:1%;
+}

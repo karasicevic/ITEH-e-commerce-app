@@ -2,8 +2,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
-    margin: 1rem 0;
+    gap: 6rem;
+    margin: 2rem 0;
   }
   
   .filters {
@@ -12,18 +12,18 @@
     grid-gap: 10px; /* Razmak između elemenata */
     align-items: center;
     justify-content: space-between;
-    background-color: #b2b7cd; /* Autentična boja pozadine */
+    background-color: #583239; /* Autentična boja pozadine */
     padding: 10px 20px;
     width: 100%; /* Zauzima trećinu ekrana */
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(109, 16, 16, 0.1);
   }
   
   .filters select{
     padding: 8px;
     border: none;
     border-radius: 3px;
-    background-color: #d6dbf3;
+    background-color: #e7e7e7;
     font-size: 14px;
     outline: none;
     width: 1000px;
@@ -32,7 +32,7 @@
     padding: 8px;
     border: none;
     border-radius: 3px;
-    background-color: #d6dbf3;
+    background-color: #e7e7e7;
     font-size: 14px;
     outline: none;
     width: 100%;

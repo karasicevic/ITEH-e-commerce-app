@@ -54,7 +54,8 @@ const Login = ({addToken,addRole}) => {
  
 }
   return (
-    <div className="login-form-container">
+    
+    <div className=" login-form-container">
       <form onSubmit={handleSubmit} className="login-form">
         <h2 className="compText left-align">//Prijavi se</h2>
 
@@ -67,6 +68,7 @@ const Login = ({addToken,addRole}) => {
         <button type="submit">Prijavi se</button>
       </form>
     </div>
+    
   );
 };
 

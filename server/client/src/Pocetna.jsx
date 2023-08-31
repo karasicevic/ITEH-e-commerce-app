@@ -6,12 +6,12 @@ const Pocetna = () => {
        <div className="content">
         <section className="aboutUs">
           <h2>O nama</h2>
-          <p class="justify-align">
+          <p className="justify-align">
           Dobrodošli u našu prodavnicu tehnike, gde se svet tehnologije stapa sa vašim potrebama. Mi smo vaša destinacija za najnovije uređaje, inovativne gadgete i visokokvalitetnu elektroniku. Naš cilj je da vam omogućimo pristup tehnološkim rešenjima koja će vas inspirisati i unaprediti vaš svakodnevni život. Bez obzira da li tražite najnovije pametne telefone, moderna računarska rešenja ili savremenu kućnu zabavu, naša prodavnica nudi širok asortiman proizvoda renomiranih brendova. Svojom stručnošću i posvećenošću, želimo da vam omogućimo da iskusite budućnost tehnologije već danas. Dobrodošli u svet mogućnosti.
            </p>
         </section>
 
-        <section class="compText">
+        <section className="compText">
           <h2> /* Pomoću nas do željenih uređaja!</h2>
           <h1>Zaplovi u svet tehnike!</h1>
           <h2>Visok kvalitet - pristupačna cena! */</h2>   
